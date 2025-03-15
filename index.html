@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Was Your Lecture? 🎓📊</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Floating Emojis Container (Dynamically Controlled via JS) -->
+    <div id="floating-emojis"></div>
+
+    <!-- Main Content Wrapper (Keeps Layout Structured) -->
+    <div id="content-wrapper">
+        
+        <!-- Page Title & Subtitle -->
+        <h1 class="page-title">
+            <span class="highlight">How Was Your Lecture?</span> 🎓📊
+        </h1>
+        <p class="subtitle">Click an emoji to rate the lecture!</p>
+
+        <!-- Emoji Voting Section -->
+        <div class="container">
+            
+            <!-- Great Vote -->
+            <div class="emoji-box" onclick="vote('great')">
+                <div class="emoji" id="great-emoji">😊</div>
+                <div class="count" id="great-count">0</div>
+            </div>
+
+            <!-- OK Vote -->
+            <div class="emoji-box" onclick="vote('ok')">
+                <div class="emoji" id="ok-emoji">😐</div>
+                <div class="count" id="ok-count">0</div>
+            </div>
+
+            <!-- Bad Vote -->
+            <div class="emoji-box" onclick="vote('bad')">
+                <div class="emoji" id="bad-emoji">☹️</div>
+                <div class="count" id="bad-count">0</div>
+            </div>
+
+        </div>
+
+        <!-- Reset Button (Resets Votes & Background) -->
+        <button class="reset-button" onclick="resetVotes()">Reset Votes</button>
+        
+    </div>
+
+    <!-- Universal Short Click Sound (Preloaded for Instant Play) -->
+    <audio id="sound-click" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
